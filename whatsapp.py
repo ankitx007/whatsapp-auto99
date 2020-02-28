@@ -30,6 +30,10 @@ while(1):
             button.click()
     elif(k=='n' or k=='N'):
         print('Thank you for using.')
+        log_out = driver.find_elements_by_class_name('_3j8Pd')
+        log_out[2].click()
+        pp = driver.find_element_by_class_name('_3zy-4 Sl-9e')
+        pp[0].click()
         break
     else:
         print('Invalid Input')
