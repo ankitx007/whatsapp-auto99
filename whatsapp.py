@@ -9,6 +9,7 @@ user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(name))
 user.click()
 msg_box = driver.find_element_by_class_name("_13mgZ")
 for i in range(count):
+    print(i)
     msg_box.send_keys(msg)
     button = driver.find_element_by_class_name("_3M-N-")
     button.click()
@@ -23,6 +24,7 @@ while(1):
         user.click()
         msg_box = driver.find_element_by_class_name("_13mgZ")
         for i in range(count):
+            print(i)
             msg_box.send_keys(msg)
             button = driver.find_element_by_class_name("_3M-N-")
             button.click()
