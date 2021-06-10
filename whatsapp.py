@@ -1,8 +1,5 @@
 from selenium import webdriver
 def whatsapp(name,msg,count):
-    driver = webdriver.Chrome()
-    driver.get('https://web.whatsapp.com/')
-    input('Press any key after scanning QR code.')
     user = driver.find_element_by_xpath('//span[@title = "{}"]'.format(name))
     user.click()
     msg_box = driver.find_element_by_class_name("_1Plpp")
@@ -41,4 +38,7 @@ def whatsapp(name,msg,count):
 name = input('Enter the name of the user or group: ')
 msg = input('Enter the message: ')
 count = int(input('Enter the count: '))
+driver = webdriver.Chrome()
+driver.get('https://web.whatsapp.com/')
+input('Press any key after scanning QR code.')
 whatsapp(name,msg,count)
